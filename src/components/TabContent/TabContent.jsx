@@ -3,13 +3,14 @@ import useRepositories from "../../hooks/useRepositories";
 import Loader from "../Loader/Loader";
 import RepositoryList from "../RepositoryList/RepositoryList";
 import Pagination from "../Pagination/Pagination";
+import SortOptions from "../SortOptions/SortOptions";
 import { TabsNavigationContext } from "../../providers/TabsProvider/TabsNavigationProvider";
 
 const ITEMS_PER_PAGE = 12;
 
 const TabContent = () => {
 
-    const [currentSortType, setCurrentSortType] = useState("stars");
+    const [currentSortType, setCurrentSortType] = useState("");
     const [currentPage, setCurrentPage] = useState(1);
 
     const { activeTab } = useContext(TabsNavigationContext);
@@ -36,11 +37,17 @@ const TabContent = () => {
         }
     };
 
+    // Sort Options
+    const handleSortChange = (value) => {
+        setCurrentSortType(value);
+        setCurrentPage(1);
+    }
     if (isLoading) return <Loader />;
     if (error) return "try again";
 
     return (
         <div className="tab-content">
+            <SortOptions sortType={currentSortType} setCurrentSortType={handleSortChange} />
             <RepositoryList items={data.items} />
             <Pagination
                 postsPerPage={ITEMS_PER_PAGE}
