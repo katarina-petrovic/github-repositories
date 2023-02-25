@@ -1,5 +1,9 @@
-const Home = () => {
-  return;
-}
+import TabsNavigation from "../components/TabsNavigation/TabsNavigation";
 
-export default Home;
+const Home = () => {
+    return (
+     <TabsNavigation />
+    );
+  }
+  
+  export default Home;

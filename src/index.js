@@ -3,11 +3,14 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { TabsNavigationProvider } from './providers/TabsProvider/TabsNavigationProvider';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <TabsNavigationProvider>
+      <App />
+    </TabsNavigationProvider>
   </React.StrictMode>
 );
 
