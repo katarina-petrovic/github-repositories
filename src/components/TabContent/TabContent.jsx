@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import useRepositories from "../../hooks/useRepositories";
-
+import Loader from "../Loader/Loader";
+import RepositoryList from "../RepositoryList/RepositoryList";
 import { TabsNavigationContext } from "../../providers/TabsProvider/TabsNavigationProvider";
 
 const ITEMS_PER_PAGE = 12;
@@ -20,9 +21,12 @@ const TabContent = () => {
 
     });
 
+    if (isLoading) return <Loader />;
+    if (error) return "try again";
+
     return (
         <div className="tab-content">
-            {console.log(data)}
+            <RepositoryList items={data.items} />
         </div>
     )
 
