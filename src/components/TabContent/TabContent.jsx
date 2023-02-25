@@ -20,6 +20,7 @@ const TabContent = () => {
         currentPage: currentPage
     });
 
+    // pagination functions
     const paginate = (pageNumber) => {
         setCurrentPage(pageNumber);
     };

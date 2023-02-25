@@ -7,6 +7,7 @@ const RepositoryList = ({items}) => {
             const { login, avatar_url } = owner;
             return <RepositoryItem
                 key={id}
+                id={id}
                 name={name}
                 forks={forks_count}
                 stars={stargazers_count}
