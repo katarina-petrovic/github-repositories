@@ -22,4 +22,4 @@ Install React Router Dom
 
 ## Token Intstruction
 
-You may need to uncomment TOKEN line in src/api/index.js. When it's not commented and push it on git repository, github blocks it and you need to create new one. 
+You may need to add github API TOKEN in src/api/index.js. When it's pushed on git repository, github blocks it and you need to create new one. 
