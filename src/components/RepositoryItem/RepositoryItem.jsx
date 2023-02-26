@@ -5,7 +5,6 @@ import forked from '../../assets/forked.png';
 
 const RepositoryItem = ({ id, name, ownerName, ownerAvatar, stars, forks }) => {
     const navigate = useNavigate();
-
     // redirecting to Repository Details page
     const goToRepositoryDetails = () => {
         navigate(`/repository/${id}`, {
@@ -26,10 +25,10 @@ const RepositoryItem = ({ id, name, ownerName, ownerAvatar, stars, forks }) => {
             </div>
             <div className="repository-item__stars-forks">
                 <div className="repository-item__stars-forks__item">
-                    <span><img src={star} alt="fork icon" /></span><span>{stars}</span>
+                    <img src={star} alt="fork icon" /><span>{stars}</span>
                 </div>
                 <div className="repository-item__stars-forks__item">
-                    <span><img src={forked} alt="fork icon" /></span><span>{forks}</span>
+                    <img src={forked} alt="fork icon" /><span>{forks}</span>
                 </div>
             </div>
         </div>

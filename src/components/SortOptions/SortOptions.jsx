@@ -2,11 +2,9 @@ import './sortOption.scss';
 
 const SortOptions = ({ setCurrentSortType, sortType }) => {
     const options = ['stars', 'forks'];
-
     const onSortOptionChangeHandler = (event) => {
         setCurrentSortType(event.target.value);
     }
-
     return (
         <select onChange={onSortOptionChangeHandler} value={sortType}>
             <option>Sort By</option>

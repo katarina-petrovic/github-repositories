@@ -13,20 +13,19 @@ const Pagination = ({ postsPerPage, totalPosts, paginate, previousPage, nextPage
       <div className="pagination-container">
          <ul className="pagination">
             <li onClick={previousPage} className="page-number">
-               <img src={ArrowLeftSvg} alt='Prev' />
+               <img src={ArrowLeftSvg} alt="Prev" />
             </li>
             {pagesArray.map((number) => (
                <li
                   key={number}
                   onClick={() => paginate(number)}
-                  className={`page-number ${currentPage == number ? 'active' : ''
-                     }`}
+                  className={`page-number ${currentPage == number ? 'active' : ''}`}
                >
                   {number}
                </li>
             ))}
             <li onClick={nextPage} className="page-number">
-               <img src={ArrowRightLeftSvg} alt='Next' />
+               <img src={ArrowRightLeftSvg} alt="Next" />
             </li>
          </ul>
       </div>

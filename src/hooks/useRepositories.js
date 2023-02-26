@@ -5,7 +5,6 @@ const useRepositories = ({topic, sort, itemsPerPage, currentPage}) => {
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState("");
     const [data, setData] = useState([]);
-
     const apiUrl = `https://api.github.com/search/repositories?q=${topic}&sort=${sort}&per_page=${itemsPerPage}&page=${currentPage}`;
     
     useEffect(() => {
@@ -23,7 +22,6 @@ const useRepositories = ({topic, sort, itemsPerPage, currentPage}) => {
 
         fetchData();
     }, [topic, sort, itemsPerPage, currentPage]);
-
 
     return { isLoading, data, error };
 }

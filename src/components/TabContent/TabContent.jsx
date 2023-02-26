@@ -2,18 +2,16 @@ import { useContext, useState } from "react";
 import './tabContent.scss';
 import useRepositories from "../../hooks/useRepositories";
 import Loader from "../Loader/Loader";
-import RepositoryList from "../RepositoryList/RepositoryList";
-import Pagination from "../Pagination/Pagination";
-import SortOptions from "../SortOptions/SortOptions";
+import RepositoryList from "../RepositoryList";
+import Pagination from "../Pagination";
+import SortOptions from "../SortOptions";
 import { TabsNavigationContext } from "../../providers/TabsProvider/TabsNavigationProvider";
 
 const ITEMS_PER_PAGE = 12;
 
 const TabContent = () => {
-
     const [currentSortType, setCurrentSortType] = useState("");
     const [currentPage, setCurrentPage] = useState(1);
-
     const { activeTab } = useContext(TabsNavigationContext);
     const { isLoading, data, error } = useRepositories({
         topic: activeTab,
@@ -31,13 +29,11 @@ const TabContent = () => {
             setCurrentPage(currentPage - 1);
         }
     };
-
     const nextPage = () => {
         if (currentPage !== Math.ceil(100 / ITEMS_PER_PAGE)) {
             setCurrentPage(currentPage + 1);
         }
     };
-
     // Sort Options
     const handleSortChange = (value) => {
         setCurrentSortType(value);
@@ -60,7 +56,6 @@ const TabContent = () => {
             />
         </div>
     )
-
 }
 
 export default TabContent;

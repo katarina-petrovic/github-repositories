@@ -1,10 +1,9 @@
-import Tab from "../Tab/Tab";
-import TabContent from "../TabContent/TabContent";
-import Tabs from "../Tabs/Tabs";
+import Tab from "../Tab";
+import TabContent from "../TabContent";
+import Tabs from "../Tabs";
 import reactIcon from "../../assets/reactIcon.svg";
 import angularIcon from "../../assets/angularIcon.svg";
 import vueIcon from "../../assets/vueIcon.svg";
-
 
 const TabsNavigation = () => {
     return (

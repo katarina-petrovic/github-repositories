@@ -1,10 +1,10 @@
-import RepositoryItem from "../RepositoryItem/RepositoryItem";
+import RepositoryItem from "../RepositoryItem";
 import "./repositoryList.scss";
 const RepositoryList = ({ items }) => {
     return (
         <div className="repository-list">
             {
-                items && items.map(item => {
+                items?.map(item => {
                     const { id, name, forks_count, stargazers_count, owner } = item;
                     const { login, avatar_url } = owner;
                     return <RepositoryItem
@@ -16,12 +16,9 @@ const RepositoryList = ({ items }) => {
                         ownerName={login}
                         ownerAvatar={avatar_url}
                     />;
-                }
-
-                )
+                })
             }
         </div>
-
     )
 }
 
