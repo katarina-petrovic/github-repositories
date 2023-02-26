@@ -83,9 +83,9 @@ const RepositoryDetails = () => {
 
                 <aside className="col-3 right" >
                     <div className="repository-details__stats">
-                        <div className="repository-details__stat"><img src={star} alt="star icon" /> {stargazers_count}</div>
-                        <div className="repository-details__stat"><img src={forked} alt="fork icon" />{forks}</div>
-                        <div className="repository-details__stat"><img src={issue} alt="fork icon" />{open_issues}</div>
+                        <div title="Number of Stars" className="repository-details__stat"><img src={star} alt="star icon" /> {stargazers_count}</div>
+                        <div title="Number of Forks" className="repository-details__stat"><img src={forked} alt="fork icon" />{forks}</div>
+                        <div title="Number of Issues" className="repository-details__stat"><img src={issue} alt="fork icon" />{open_issues}</div>
                     </div>
 
                     <div className="repository-details__contributors">
