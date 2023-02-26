@@ -11,7 +11,8 @@ const RepositoryItem = ({ id, name, ownerName, ownerAvatar, stars, forks }) => {
         navigate(`/repository/${id}`, {
             state: {
                 ownerName: ownerName,
-                repoName: name
+                repoName: name,
+                ownerAvatar: ownerAvatar
             },
         });
     };

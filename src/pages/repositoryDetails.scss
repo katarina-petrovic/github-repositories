@@ -1,0 +1,177 @@
+[class*="col-"] {
+    float: left;
+}
+
+/* for mobile */
+[class*="col-"] {
+    width: 100%;
+}
+
+/* for desktop */
+@media only screen and (min-width: 950px) {
+    .col-1 {
+        width: 8.33%;
+    }
+
+    .col-2 {
+        width: 16.66%;
+    }
+
+    .col-3 {
+        width: 20%;
+    }
+
+    .col-4 {
+        width: 33.33%;
+    }
+
+    .col-5 {
+        width: 41.66%;
+    }
+
+    .col-6 {
+        width: 50%;
+    }
+
+    .col-7 {
+        width: 58.33%;
+    }
+
+    .col-8 {
+        width: 66.66%;
+    }
+
+    .col-9 {
+        width: 75%;
+    }
+
+    .col-10 {
+        width: 88.33%;
+    }
+
+    .col-11 {
+        width: 91.66%;
+    }
+
+    .col-12 {
+        width: 100%;
+    }
+}
+
+.left {
+    text-align: center;
+}
+
+
+
+section h1 {
+    padding-bottom: 20px;
+    font-size: 30px;
+    color: #a04444;
+    text-align: center;
+}
+
+
+.created,
+.update {
+    margin-top: 5px;
+    border-bottom: 1px solid white;
+    padding: 6px 0;
+    font-size: 15px;
+}
+
+.created p,
+.update p {
+    font-size: 15px;
+    padding-top: 5px;
+}
+
+
+.programming-lang {
+    margin-top: 15px;
+}
+
+.right {
+    padding-left: 20px;
+}
+
+.stars {
+    margin-top: 50px;
+}
+
+.stars p {
+    padding: 4px;
+    border-bottom: 1px solid white;
+
+}
+
+.contributor {
+    padding-top: 12px;
+
+}
+
+.contributor .box {
+    float: left;
+    padding: 10px;
+    text-align: center;
+    font-size: 10px;
+    width: 30%;
+}
+
+img {
+    width: 50px;
+}
+
+.repository-details {
+    margin-top: 50px;
+
+    .repository-details__description {
+        min-height: 130px;
+        background-color: #ededed5e;
+        padding: 5px;
+    }
+
+    .repository-details__dates {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom:  40px;
+        .repository-details__date {
+            display: flex;
+            gap: 5px;
+            align-items: center;
+        }
+    }
+
+    .avatar-image {
+        padding-top: 5px;
+        width: 150px;
+        border-radius: 35px;
+    }
+
+    .repository-details__stats {
+
+        .repository-details__stat {
+            display: flex;
+            flex-direction: row;
+            gap: 14px;
+            margin-bottom: 10px;
+
+            img {
+                width: 25px;
+            }
+        }
+
+
+    }
+
+    .repository-details__topics {
+        display: flex;
+        justify-content: space-around;
+
+        .repository-details__topics__topic {
+            border-radius: 3px;
+            background-color: rgb(231 231 231);
+            padding: 3px 8px;
+        }
+    }
+}
