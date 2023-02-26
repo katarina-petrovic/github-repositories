@@ -88,16 +88,6 @@ const RepositoryDetails = () => {
                         <div title="Number of Issues" className="repository-details__stat"><img src={issue} alt="fork icon" />{open_issues}</div>
                     </div>
 
-                    <div className="repository-details__contributors">
-                        <h5> Contributors:</h5>
-
-                        <div className="box">
-                            <img src="./images/avatar.svg" alt="" />
-                            <p>Mika</p>
-                        </div>
-
-                    </div>
-
                 </aside>
 
             </div>
