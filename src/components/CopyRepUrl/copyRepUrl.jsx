@@ -3,14 +3,19 @@ import './copyRepUrl.scss';
 const CopyRepUrls = ({ textUrl }) => {
 
     const displaySuccess = () => {
-        const tempNotice = document.createElement('span');
-        tempNotice.style.textAlign = "center";
+        const tempNotice = document.createElement('div');
+        tempNotice.className = "notice";
         tempNotice.innerText = 'text copied!';
 
-        const parent = document.querySelector(".container-copy-text");
-        parent.appendChild(tempNotice);
+        const parentDiv = document.querySelector(".container-copy-text");
+        parentDiv.appendChild(tempNotice);
 
-        setTimeout(() => parent.removeChild(tempNotice), 2000)
+        const copyText = document.querySelector(".copy-text");
+        copyText.classList.add("disable-click");
+        setTimeout(() => {
+            parentDiv.removeChild(tempNotice);
+            copyText.classList.remove("disable-click");
+        }, 2000)
         
     }
 

@@ -166,7 +166,9 @@ img {
 
     .repository-details__topics {
         display: flex;
-        justify-content: space-around;
+        justify-content: start;
+        gap: 10px;
+        flex-wrap: wrap;
 
         .repository-details__topics__topic {
             border-radius: 3px;

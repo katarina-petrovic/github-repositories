@@ -1,13 +1,28 @@
-.copy-text {
-    background-color: rgba(128, 128, 128, 0.431372549);
-    border: 1px solid #a1a1a1;
-    background-repeat: no-repeat;
-    background-position: right;
-    border-radius: 20px;
-    padding: 10px;
-    text-align: center;
-    background-image: url('clone.png');
-    margin-bottom: 20px;
-    width: 70%;
-    margin: 20px auto;
+.container-copy-text {
+    height: 90px;
+
+    .copy-text {
+        background-color: rgba(128, 128, 128, 0.431372549);
+        border: 1px solid #a1a1a1;
+        background-repeat: no-repeat;
+        background-position: right;
+        border-radius: 20px;
+        padding: 10px;
+        text-align: center;
+        background-image: url('clone.png');
+        margin-bottom: 20px;
+        width: 70%;
+        margin: 20px auto;
+        padding-right: 30px;
+
+        &.disable-click {
+            pointer-events: none;
+        }
+    }
+
+    .notice {
+        color: green;
+        text-align: center;
+    }
 }
+
