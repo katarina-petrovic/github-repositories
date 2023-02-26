@@ -1,6 +1,6 @@
 
 // token for API github
-const TOKEN = "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";
+const TOKEN = "";
 
 export const fetchApiData = (url) => {
     return new Promise((resolve, reject) => {
