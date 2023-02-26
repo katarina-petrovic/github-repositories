@@ -1,7 +1,6 @@
 
 // token for API github
-//const TOKEN = "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";
-const TOKEN = "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";
+const TOKEN = "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";
 
 export const fetchApiData = (url) => {
     return new Promise((resolve, reject) => {

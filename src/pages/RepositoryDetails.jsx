@@ -3,17 +3,19 @@ import Loader from "../components/Loader/Loader";
 import useRepositoryDetails from "../hooks/useRepositoryDetails";
 
 const RepositoryDetails = () => {
-    const {state} = useLocation();
-    const {isLoading, data, error} = useRepositoryDetails({ownerName: state.ownerName, repoName: state.repoName});
+    const { state } = useLocation();
+    const { isLoading, data, error } = useRepositoryDetails({ ownerName: state.ownerName, repoName: state.repoName });
 
     if (isLoading) return <Loader />;
     if (error) return "try again";
     return (data ? (
-        <div className="repository-details">
-            { console.log(data)}
+        <div className="container center">
+            <div className="repository-details">
+                {console.log(data)}
+            </div>
         </div>
     ) : "No data available"
     );
-  }
-  
-  export default RepositoryDetails;
+}
+
+export default RepositoryDetails;

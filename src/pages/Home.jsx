@@ -1,9 +1,11 @@
 import TabsNavigation from "../components/TabsNavigation/TabsNavigation";
 
 const Home = () => {
-    return (
-     <TabsNavigation />
-    );
-  }
-  
-  export default Home;
+  return (
+    <div className="container">
+      <TabsNavigation />
+    </div>
+  );
+}
+
+export default Home;

@@ -1,3 +1,5 @@
+import './sortOption.scss';
+
 const SortOptions = ({ setCurrentSortType, sortType }) => {
     const options = ['stars', 'forks'];
 

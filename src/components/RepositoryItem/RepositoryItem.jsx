@@ -1,4 +1,7 @@
 import { useNavigate } from "react-router-dom";
+import './repositoryItem.scss';
+import star from '../../assets/star.png';
+import forked from '../../assets/forked.png';
 
 const RepositoryItem = ({ id, name, ownerName, ownerAvatar, stars, forks }) => {
     const navigate = useNavigate();
@@ -13,7 +16,7 @@ const RepositoryItem = ({ id, name, ownerName, ownerAvatar, stars, forks }) => {
         });
     };
     return (
-        <div className="repository-item"  onClick={goToRepositoryDetails}>
+        <div className="repository-item" onClick={goToRepositoryDetails}>
             <div className="repository-item__owner">
                 <span><img src={ownerAvatar} alt={ownerName} /></span><span>{ownerName}</span>
             </div>
@@ -22,10 +25,10 @@ const RepositoryItem = ({ id, name, ownerName, ownerAvatar, stars, forks }) => {
             </div>
             <div className="repository-item__stars-forks">
                 <div className="repository-item__stars-forks__item">
-                    {stars}
+                    <span><img src={star} alt="fork icon" /></span><span>{stars}</span>
                 </div>
                 <div className="repository-item__stars-forks__item">
-                    {forks}
+                    <span><img src={forked} alt="fork icon" /></span><span>{forks}</span>
                 </div>
             </div>
         </div>

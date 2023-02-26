@@ -1,4 +1,5 @@
 import { useContext, useState } from "react";
+import './tabContent.scss';
 import useRepositories from "../../hooks/useRepositories";
 import Loader from "../Loader/Loader";
 import RepositoryList from "../RepositoryList/RepositoryList";

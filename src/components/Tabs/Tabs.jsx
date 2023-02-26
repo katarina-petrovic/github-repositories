@@ -1,3 +1,4 @@
+import './tabs.scss';
 
 const Tabs = ({ children }) => {
 

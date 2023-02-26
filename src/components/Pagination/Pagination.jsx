@@ -1,6 +1,6 @@
 import ArrowLeftSvg from '../../assets/leftArrow.svg';
 import ArrowRightLeftSvg from '../../assets/rightArrow.svg';
-
+import './pagination.scss';
 
 const Pagination = ({ postsPerPage, totalPosts, paginate, previousPage, nextPage, currentPage }) => {
    const maxPages = Math.ceil(totalPosts / postsPerPage);
