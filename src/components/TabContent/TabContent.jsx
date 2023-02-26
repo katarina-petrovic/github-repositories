@@ -55,6 +55,7 @@ const TabContent = () => {
                 paginate={paginate}
                 previousPage={previousPage}
                 nextPage={nextPage}
+                currentPage = {currentPage}
             />
         </div>
     )
